@@ -2,13 +2,17 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { produce } from './storeItems';
 
+const mockInventory = produce;
 
-const initialInventory = [produce];
-
-export const inventorySlice = createSlice({
+const inventorySlice = createSlice({
     name: 'inventory',
-    initialInventory,
+    initialState: {
+        items: produce,
+    },
     reducers: {
 
-    }
-})
+    },
+}); 
+
+export const selectInventory = (state) => state.inventory.items;
+export default inventorySlice.reducer;

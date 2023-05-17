@@ -1,10 +1,10 @@
 import React, {useState} from 'react';
 import "../../styles/components.css"
-import styles from "./shopping.module.css"
+// import styles from "./shopping.module.css"
 import Search from "../Search";
+import Inventory from '../../features/Shopping/inventory/Inventory';
 
-import ItemList from "./ItemList";
-import { produce2, dairy, candy } from '../../features/Shopping/inventory/storeItems';
+import { produce2 } from '../../features/Shopping/inventory/storeItems';
 
 
 
@@ -23,7 +23,7 @@ export default function Shopping() {
 
             <div>
                 <h2>Produce</h2>
-
+                <Inventory />
             </div>
             
         </div>

@@ -13,7 +13,17 @@
 }
 
 .item img {
+    /* max-width: 60%; */
     max-width: 60%;
-    height: 60%;
+    min-height: 60%;
     margin-top: 0.5rem;
+}
+
+.item p {
+    margin: 0 0 0.5rem 0; 
+}
+
+.item h3 {
+    margin: 0.5rem 0;
+
 }
