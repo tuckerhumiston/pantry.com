@@ -1,7 +1,7 @@
 import { React } from 'react';
 import styles from '../../styles/shopping.module.css';
 
-import { addItem } from '../../features/Shopping/cart/cartSlice';
+import { addToCart, incrementQuantity, decrementQuantity } from '../../features/Shopping/cart/cartSlice';
 import { useDispatch } from "react-redux";
 
 
@@ -14,7 +14,7 @@ export default function Item({item}) {
     const dispatch = useDispatch();
 
     const onAddToCartHandler = (item) => {
-        dispatch(addItem(item));
+        dispatch(addToCart(item));
     }
 
     return (
