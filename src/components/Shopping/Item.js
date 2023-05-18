@@ -1,20 +1,22 @@
 import { React } from 'react';
 import styles from '../../styles/shopping.module.css';
 
-import { addToCart, incrementQuantity, decrementQuantity } from '../../features/Shopping/cart/cartSlice';
+import { addToCart, removeItem } from '../../features/Shopping/cart/cartSlice';
 import { useDispatch } from "react-redux";
 
 
 
 
-
-//Note: Not sure what children does... FIXME?
+//Need to add logic for increment and decrement cart items.
 
 export default function Item({item}) {
     const dispatch = useDispatch();
 
     const onAddToCartHandler = (item) => {
         dispatch(addToCart(item));
+    }
+    const onRemoveFromCartHandler = (item) => {
+        dispatch(removeItem(item));
     }
 
     return (
@@ -25,7 +27,7 @@ export default function Item({item}) {
             <p>Price: ${item.price}</p>
             <div className="buttons">
                     <button onClick={() => onAddToCartHandler(item)}>+</button>
-                    <button>-</button>
+                    <button onClick={() => onRemoveFromCartHandler(item)}>-</button>
             </div>
         </div>
     )

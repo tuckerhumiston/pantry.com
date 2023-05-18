@@ -9,8 +9,8 @@ const Cart = () => {
 
     return (
         <div className="cart">
-            {cartInventory.map((item) => (
-                <p>{item.name}</p>
+            {cartInventory?.map((item) => (
+                <p> TEST: {item.name}</p>
             ))}
         </div>
     )
