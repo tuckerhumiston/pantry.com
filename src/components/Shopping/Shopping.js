@@ -4,9 +4,6 @@ import "../../styles/components.css"
 import Search from "../Search";
 import Inventory from '../../features/Shopping/inventory/Inventory';
 
-import { produce2 } from '../../features/Shopping/inventory/storeItems';
-
-
 
 export default function Shopping() {
 
@@ -16,6 +13,7 @@ export default function Shopping() {
             <Search id="shopping-search" />
             
             <h2>Cart: 🛒 </h2>
+            
             
             <ul> {/* Display Cart contents */}
                 

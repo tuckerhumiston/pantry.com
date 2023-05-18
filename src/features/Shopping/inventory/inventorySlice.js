@@ -2,8 +2,6 @@ import { createSlice } from '@reduxjs/toolkit';
 
 import { produce } from './storeItems';
 
-const mockInventory = produce;
-
 const inventorySlice = createSlice({
     name: 'inventory',
     initialState: {
