@@ -1,19 +1,16 @@
 import { React } from 'react';
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
+import { selectCart } from './cartSlice';
 
 
-const Cart = () => {
-    const dispatch = useDispatch();
-    const cartInventory = useSelector(selectCart);
-
+export const Cart = () => {
+    const cart = useSelector(selectCart);
 
     return (
         <div className="cart">
-            {cartInventory?.map((item) => (
-                <p> TEST: {item.name}</p>
+            {cart.cart?.map( (item) => (
+                <p>{item.name} x{item.quantity}</p>
             ))}
         </div>
     )
 }
-
-export default Inventory;

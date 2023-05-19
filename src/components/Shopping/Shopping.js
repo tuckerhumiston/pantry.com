@@ -3,7 +3,7 @@ import "../../styles/components.css"
 // import styles from "./shopping.module.css"
 import Search from "../Search";
 import Inventory from '../../features/Shopping/inventory/Inventory';
-
+import { Cart } from '../../features/Shopping/cart/cart';
 
 export default function Shopping() {
 
@@ -13,11 +13,7 @@ export default function Shopping() {
             <Search id="shopping-search" />
             
             <h2>Cart: 🛒 </h2>
-            
-            
-            <ul> {/* Display Cart contents */}
-                
-            </ul>
+            <Cart />
 
             <div>
                 <h2>Produce</h2>
