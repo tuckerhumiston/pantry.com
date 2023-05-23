@@ -1,34 +1,29 @@
 import { React } from 'react';
-import styles from '../../styles/shopping.module.css';
+import styles from '../../features/Shopping/shopping.module.css';
 
-import { addToCart, removeItem } from '../../features/Shopping/cart/cartSlice';
+import { addToCart } from '../../features/Shopping/cart/cartSlice';
 import { useDispatch } from "react-redux";
 
 
-
-
-//Need to add logic for increment and decrement cart items.
-
 export default function Item({item}) {
-    const dispatch = useDispatch();
-
-    const onAddToCartHandler = (item) => {
-        dispatch(addToCart(item));
-    }
-    const onRemoveFromCartHandler = (item) => {
-        dispatch(removeItem(item));
-    }
+    const dispatch = useDispatch()
+    const image = item.image;
+    const id = item.id;
+    const title = item.name;
+    const price = item.price;
 
     return (
         <div key={item.id} className={styles.item}>
-            {/* <img src={require('../../styles/image-not-found.jpg')} /> */}
             <img src={item.image} />
             <h3>{item.name}</h3>
             <p>Price: ${item.price}</p>
-            <div className="buttons">
-                    <button onClick={() => onAddToCartHandler(item)}>+</button>
-                    <button onClick={() => onRemoveFromCartHandler(item)}>-</button>
-            </div>
+            <button 
+                onClick={() => 
+                    dispatch(addToCart({
+                        id, title, image, price
+                    }))
+                }>Add to Cart
+            </button>
         </div>
     )
 }
