@@ -1,7 +1,7 @@
 import { React } from 'react';
 import styles from '../../features/Shopping/shopping.module.css';
 
-import { addToCart } from '../../features/Shopping/cart/cartSlice';
+import { addToCart } from './cart/cartSlice';
 import { useDispatch } from "react-redux";
 
 

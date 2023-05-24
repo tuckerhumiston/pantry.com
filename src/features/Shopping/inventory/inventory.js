@@ -1,6 +1,6 @@
 import { React } from 'react';
 import { useDispatch, useSelector } from "react-redux";
-import Item from '../../../components/Shopping/Item';
+import Item from '../Item';
 import { selectInventory } from './inventorySlice';
 
 const Inventory = () => {

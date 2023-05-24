@@ -3,7 +3,7 @@ import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} fr
 
 import './App.css';
 import Root from '../components/Root';
-import Shopping from '../components/Shopping/Shopping';
+import Shopping from '../features/Shopping/Shopping';
 // import Signup from './components/SignUp';
 import Login from '../components/Login';
 import Profile from '../components/Profile';
@@ -36,9 +36,7 @@ const router = createBrowserRouter( createRoutesFromElements(
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        {/* <Counter /> */}
-      </header>
+      <header className="App-header"></header>
       <RouterProvider router={ router }/>
     </div>
   );

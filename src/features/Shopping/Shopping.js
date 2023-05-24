@@ -1,12 +1,12 @@
 import React from 'react';
 import {useSelector} from 'react-redux';
-import { selectCart } from '../../features/Shopping/cart/cartSlice.js';
+import { selectCart } from './cart/cartSlice.js';
 
-
+import "../../features/Shopping/Shopping.css"
 import "../../styles/components.css"
-import Search from "../Search";
-import Inventory from '../../features/Shopping/inventory/Inventory';
-import { Cart } from '../../features/Shopping/cart/cart';
+import Search from "../../components/Search.js";
+import Inventory from './inventory/Inventory.js';
+import { Cart } from './cart/cart.js';
 
 export default function Shopping() {
     const cart = useSelector(selectCart);
@@ -24,9 +24,13 @@ export default function Shopping() {
 
     return (
         <div className='main'>
-            <h1>Shopping</h1>
-            <Search id="shopping-search" />
-            
+
+            <div className="head-box"> 
+                <img src={require("../../styles/images/shopping-background.jpg")} alt="Grochery food" className='background-img'/>
+                <h1>Shopping</h1>
+                <Search id="shopping-search" />
+            </div>
+
             <h2>Cart: 🛒 ${getTotal()}</h2>
             <Cart />
 
