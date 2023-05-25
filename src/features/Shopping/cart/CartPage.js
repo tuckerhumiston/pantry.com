@@ -33,21 +33,31 @@ export default function CartPage() {
 
     return (
         <div className="cart-page">
-            <h1>Cart</h1>
-            <div className="cart">
-                {cart.cart?.map( (item) => (
-                    <CartItem 
-                        key={item.id}
-                        id={item.id}
-                        image={item.image}
-                        title={item.title}
-                        price={item.price} 
-                        quantity={item.quantity}
-                    />
-                ))}
+            <div className="shopping-cart">
+                <h2>Shopping Cart:</h2>
+                <div className="cart">
+                    {cart.cart?.map( (item) => (
+                        <CartItem 
+                            key={item.id}
+                            id={item.id}
+                            image={item.image}
+                            title={item.title}
+                            price={item.price} 
+                            quantity={item.quantity}
+                        />
+                    ))}
+                </div>
+                <h3>Subtotal: ${getTotal()}</h3>
             </div>
-            <h3>Total: ${getTotal()}</h3>
-            <button onClick={() => handleCheckout()}>Checkout</button>
+            <div className="payment">
+                <form>
+                    <input />
+                    <input />
+                    <input />
+                    <input />
+                    <button onClick={() => handleCheckout()}>Checkout</button>
+                </form>
+            </div>
         </div>
     )
 }

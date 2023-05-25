@@ -1,8 +1,8 @@
 .main {
     margin: 0;
-    background-color: rgb(220, 220, 220);
+    background-color: white;
     text-align: center;
-    padding: 0;
+    padding: 0 0 1em 0;
 
     position:  relative;
     height: 100%;

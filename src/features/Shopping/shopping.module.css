@@ -70,3 +70,9 @@
 .editInCart * {
     margin: auto 1em;
 }
+
+.editInCart button {
+    background-color: rgb(135, 189, 135);
+    border: 1px solid black;
+    border-radius: 0.2em;
+}
