@@ -19,9 +19,32 @@ export default function Item({item}) {
 
     const findQuantity = () => {
         const found = cart.cart?.find( item => item.id === id);
-        return found.quantity;
+
+        return found ? found.quantity : 0;
+    }
+
+    const handleMinDispatch = (id) => {
+        const quantity = findQuantity();
+
+        if (quantity === 1) {
+            dispatch(removeItem(id));
+        } else {
+            dispatch(decrementQuantity(id));
+        }
     }
     
+    const handleAddDispatch = (id) => {
+        const quantity = findQuantity();
+
+        if (quantity === 0) {
+            dispatch(addToCart({
+                id, title, image, price
+            }))
+        } else {
+            dispatch(incrementQuantity(id));
+        }
+        
+    }
 
 
     return (
@@ -31,20 +54,11 @@ export default function Item({item}) {
             <h3>{item.name}</h3>
             <p>Price: ${item.price}</p>
 
-            <div className='addToCart'>
-                <button 
-                    onClick={() => 
-                        dispatch(addToCart({
-                            id, title, image, price
-                        }))
-                    }>Add to Cart
-                </button>
-            </div>
-
+            {/* Add/remove items in cart */}
             <div className={styles.editInCart}>
-                <button onClick={() => dispatch(decrementQuantity(id))}>-</button>
+                <button onClick={() => handleMinDispatch(id)}>-</button>
                 <p>x {findQuantity()}</p> 
-                <button onClick={() => dispatch(incrementQuantity(id))}>+</button>
+                <button onClick={() => handleAddDispatch(id)}>+</button>
             </div>
 
         </div>
