@@ -1,0 +1,12 @@
+.cart-page {
+    background-color: bisque;
+    margin: 0;
+    padding: 4em 2em;
+    /* text-align: center; */
+}
+
+.cart-page h1 {
+    color: black !important;
+    margin: 0;
+    margin-bottom: 1em;
+}

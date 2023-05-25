@@ -13,7 +13,7 @@ function CartItem({id, title, price, quantity=0}) {
           <p className="cartItem__title">{title}</p>
           <p className="cartItem__price">
             <small>$</small>
-            <strong>{price}</strong>
+            <strong>{(price * quantity).toFixed(2)}</strong>
           </p>
           <div className='cartItem__incrDec'>
             <button onClick={() => dispatch(decrementQuantity(id))}>-</button>
