@@ -60,3 +60,14 @@
 .cartItem button {
     padding: 0;
 }
+
+
+
+.editInCart {
+    display: flex;
+    
+}
+
+.editInCart * {
+    margin: auto 1em;
+}

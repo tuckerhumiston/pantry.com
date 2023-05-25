@@ -6,7 +6,6 @@ import "../../features/Shopping/Shopping.css"
 import "../../styles/components.css"
 import Search from "../../components/Search.js";
 import Inventory from './inventory/Inventory.js';
-import { Cart } from './cart/cart.js';
 
 export default function Shopping() {
     const cart = useSelector(selectCart);
@@ -30,8 +29,7 @@ export default function Shopping() {
                 <Search id="shopping-search" />
             </div>
 
-            <h2>Cart: 🛒 ${getTotal()}</h2>
-            <Cart />
+            <h2>Cart: <a href="http://localhost:3000/cart">🛒</a> ${getTotal()}</h2>
 
             <div>
                 <h2>Produce</h2>

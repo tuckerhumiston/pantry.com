@@ -4,6 +4,7 @@ import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} fr
 import './App.css';
 import Root from '../components/Root';
 import Shopping from '../features/Shopping/Shopping';
+import CartPage from '../features/Shopping/cart/CartPage';
 // import Signup from './components/SignUp';
 import Login from '../components/Login';
 import Profile from '../components/Profile';
@@ -21,7 +22,7 @@ const router = createBrowserRouter( createRoutesFromElements(
 
     <Route path="home" element={ <Home /> } />
     <Route path="shopping" element={ <Shopping /> } />
-    {/* <Route path="cart" element={ <Cart /> } /> */}
+    <Route path="cart" element={ <CartPage /> } />
     {/* <Route path="checkout" element={ <Checkout /> } /> */}
 
     <Route path="pantry" element={ <Pantry /> } />
