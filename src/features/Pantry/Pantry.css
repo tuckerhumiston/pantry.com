@@ -1,0 +1,26 @@
+.pantry {
+    background-color: black;
+
+    min-height: 800px;
+
+    display: flex;
+    flex-direction: row;
+    position: relative;
+
+}
+
+.right {
+    width: 65%;
+    position: relative;
+    justify-content: flex-start;
+
+    background-color: rgb(255, 166, 0);
+}
+
+.left {
+    width: 35%;
+    position: relative;
+    justify-content: flex-start;
+
+    background-color: rgb(148, 0, 0);
+}

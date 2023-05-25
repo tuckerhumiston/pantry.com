@@ -8,8 +8,8 @@ import Shopping from '../features/Shopping/Shopping';
 import Login from '../components/Login';
 import Profile from '../components/Profile';
 import Home from '../components/Home';
-import Pantry from '../components/Pantry';
-import Recipes from '../components/Recipes';
+import Pantry from '../features/Pantry/Pantry';
+import Recipes from '../features/Recipes/Recipes';
 
 const router = createBrowserRouter( createRoutesFromElements( 
   <>

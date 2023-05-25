@@ -26,7 +26,6 @@ export default function Shopping() {
         <div className='main'>
 
             <div className="head-box"> 
-                <img src={require("../../styles/images/shopping-background.jpg")} alt="Grochery food" className='background-img'/>
                 <h1>Shopping</h1>
                 <Search id="shopping-search" />
             </div>

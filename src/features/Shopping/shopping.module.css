@@ -6,21 +6,24 @@
     flex-direction: column;
     align-items: center;
 
-    background-color: bisque;
-    margin: 0.5em;
-    width: 18rem;
+    margin: 0.6em;
+    width: 14rem;
     height: 18rem;
     border-radius: 10px;
+    border: 1.2px solid rgb(160, 160, 160);
 }
 
 .item img {
     max-width: 60%;
     min-height: 60%;
-    margin-top: 0.5rem;
+    margin: 0.5rem 0;
+
+    
 }
 
 .item p {
     margin: 0 0 0.5rem 0; 
+    
 }
 
 .item h3 {

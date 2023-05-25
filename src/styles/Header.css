@@ -2,21 +2,29 @@
     position: absolute;
     z-index: 3;
     display: flex;
-    
+    justify-content: center;
+    width: 100%;
 }
 
-.header-links {
+.header * {
     display: flex;
-    height: 4rem;    
+    justify-content: center;
+}
+
+.header-links  {
+    display: flex;
+    height: 4rem;  
+    
+      
 }
 
 .link {
     font-size: 1rem;
     font-weight:500;
     text-decoration: none;
-    color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
 
-    padding: 0.5rem;
     border-radius: 0.5rem;
-
+    padding: 1em 2em;
+    text-decoration: underline;
 }
