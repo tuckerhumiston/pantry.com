@@ -2,6 +2,7 @@ import { configureStore } from '@reduxjs/toolkit';
 import inventoryReducer from '../features/Shopping/inventory/inventorySlice';
 import { cartReducer } from '../features/Shopping/cart/cartSlice';
 import { pantryReducer } from '../features/Pantry/pantrySlice'
+import { combineReducers } from '@reduxjs/toolkit';
  
 import storage from 'redux-persist/lib/storage';
 import {
@@ -20,16 +21,19 @@ const persistConfig = {
   storage,
 }
 
-const cart = persistReducer(persistConfig, cartReducer);
-const pantry = persistReducer(persistConfig, pantryReducer);
 
+
+
+const reducers = combineReducers({
+  cart: cartReducer,
+  inventory: inventoryReducer,
+  pantry: pantryReducer,
+})
+
+const persistedReducer = persistReducer(persistConfig, reducers);
 
 export const store = configureStore({
-  reducer: {
-    cart,
-    inventory: inventoryReducer,
-    pantry,
-  },
+  reducer: persistedReducer,
   middleware: (getDefaultMiddleware) =>
     getDefaultMiddleware({
       serializableCheck: {
@@ -38,4 +42,4 @@ export const store = configureStore({
     }),
 })
 
-export const persistor = persistStore(store)
+export const persistor = persistStore(store);

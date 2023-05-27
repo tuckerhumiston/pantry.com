@@ -1,17 +1,23 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 import { selectCart } from './cartSlice';
 import CartItem from './CartItem';
+
+import { addToPantry, incrementQuantity } from "../../Pantry/pantrySlice";
+import { selectPantry } from "../../Pantry/pantrySlice";
+
 import './CartPage.css';
 
 
 export default function CartPage() {
     const cart = useSelector(selectCart);
+    const pantry = useSelector(selectPantry);
+    const dispatch = useDispatch();
 
     const getTotal = () => {
         let totalQuantity = 0;
         let totalPrice = 0;
-        cart.cart.forEach(item => {
+        cart.forEach(item => {
           totalQuantity += item.quantity;
           totalPrice += item.price * item.quantity;
         })
@@ -19,12 +25,24 @@ export default function CartPage() {
         return totalPrice;
       }
 
-    const handleCheckout = () => {
-        console.log('testing checkout');
+    const isItemInCart = (item) => {
+        let found = pantry.find(item1 => item1.id === item.id);
 
-        // Note:
-        //     1. First set up new state for the pantry items
-        //     2. Have this handleCheckout function temporarily remove all items from the cart and add them to the pantry.
+        //FIXME
+        if (found) {
+            dispatch(incrementQuantity(item.id));
+        } else {
+            dispatch(addToPantry(item.id, item.title));
+            // console.log(item.title);
+        }
+    }
+
+    const handleCheckout = () => {
+        console.log('testing checkout...');
+
+        cart?.forEach( item => (
+            isItemInCart(item)
+        ))
 
     }
 
@@ -36,7 +54,7 @@ export default function CartPage() {
             <div className="shopping-cart">
                 <h2>Shopping Cart:</h2>
                 <div className="cart">
-                    {cart.cart?.map( (item) => (
+                    {cart?.map( (item) => (
                         <CartItem 
                             key={item.id}
                             id={item.id}

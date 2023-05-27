@@ -13,7 +13,7 @@ export default function Shopping() {
     const getTotal = () => {
         let totalQuantity = 0;
         let totalPrice = 0;
-        cart.cart.forEach(item => {
+        cart.forEach(item => {
           totalQuantity += item.quantity;
           totalPrice += item.price * item.quantity;
         })
@@ -30,6 +30,8 @@ export default function Shopping() {
             </div>
 
             <h2>Cart: <a href="http://localhost:3000/cart">🛒</a> ${getTotal()}</h2>
+            {/* <h2>Cart: <a href="http://localhost:3000/cart">🛒</a> $</h2> */}
+
 
             <div>
                 <h2>Produce</h2>

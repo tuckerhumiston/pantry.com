@@ -1,6 +1,5 @@
 import { React } from 'react';
-import { useDispatch } from "react-redux";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
 
 import { addToCart, incrementQuantity, decrementQuantity, removeItem } from './cart/cartSlice';
 import { selectCart } from './cart/cartSlice';
@@ -10,6 +9,8 @@ import styles from '../../features/Shopping/shopping.module.css';
 
 export default function Item({item}) {
     const cart = useSelector(selectCart);
+    console.log('Cart contents:')
+    console.log(cart);
     const dispatch = useDispatch()
 
     const image = item.image;
@@ -18,7 +19,7 @@ export default function Item({item}) {
     const price = item.price;
 
     const findQuantity = () => {
-        const found = cart.cart?.find( item => item.id === id);
+        const found = cart?.find( item => item.id === id);
 
         return found ? found.quantity : 0;
     }

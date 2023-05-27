@@ -7,6 +7,7 @@ import { selectPantry } from './pantrySlice';
 import PantryItem from "./PantryItem";
 
 
+
 export default function Pantry() {
     const pantry = useSelector(selectPantry);
 
@@ -14,7 +15,7 @@ export default function Pantry() {
         <div className="main">
             <h1>Pantry</h1>
             
-            <div class="pantry">
+            <div className="pantry">
                 <div className="left">
                     <h2>Add Items</h2>
                     <SearchBar id="item-search" />
@@ -24,7 +25,7 @@ export default function Pantry() {
                     <SearchBar id="pantry-search" />
 
                     <div>
-                        {pantry.pantry?.map((item) => (
+                        {pantry?.map((item) => (
                             <PantryItem 
                                 key={item.id}
                                 id={item.id}
