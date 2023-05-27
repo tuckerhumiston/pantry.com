@@ -5,7 +5,7 @@ import { incrementQuantity, decrementQuantity, removeItem } from './cartSlice';
 import { useDispatch } from 'react-redux';
 
 function CartItem({id, title, price, quantity=0}) {
-    const dispatch = useDispatch()
+    const dispatch = useDispatch();
   
     return (
       <div className={styles.cartItem}>
