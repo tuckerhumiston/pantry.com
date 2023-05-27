@@ -47,16 +47,27 @@ export default function CartPage() {
                         />
                     ))}
                 </div>
-                <h3>Subtotal: ${getTotal()}</h3>
+                <button className="checkout-button" onClick={() => handleCheckout()}>Checkout</button>
             </div>
             <div className="payment">
+                <h3>Payment Info:</h3>
                 <form>
-                    <input />
-                    <input />
-                    <input />
-                    <input />
-                    <button onClick={() => handleCheckout()}>Checkout</button>
+                    <label>Name On Card:</label>
+                    <input type="text" />
+                    <label>Card Number:</label>
+                    <input type="number" />
+                    <div className="date-cvv">
+                        <div className="date">
+                            <label>Expiration Date:</label>
+                            <input type="date" />
+                        </div>
+                        <div className="cvv">
+                            <label>CVV:</label>
+                            <input type="number" />
+                        </div>
+                    </div>
                 </form>
+                <h3>Subtotal: ${getTotal()}</h3>
             </div>
         </div>
     )
