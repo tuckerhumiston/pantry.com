@@ -27,12 +27,17 @@ export default function CartPage() {
 
     const isItemInCart = (item) => {
         let found = pantry.find(item1 => item1.id === item.id);
+        console.log(found);
+
+        const id = item.id;
+        const title = item.title;
 
         //FIXME
         if (found) {
             dispatch(incrementQuantity(item.id));
         } else {
-            dispatch(addToPantry(item.id, item.title));
+            // dispatch(addToPantry(item.id, item.title));
+            dispatch(addToPantry({id, title}));
             // console.log(item.title);
         }
     }

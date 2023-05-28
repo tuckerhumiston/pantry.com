@@ -1,6 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
 
-
 const pantrySlice = createSlice({
     name: 'pantry',
     initialState: {
@@ -10,10 +9,11 @@ const pantrySlice = createSlice({
     reducers: {
         addToPantry: (state, action) => {
             const itemInPantry = state.find((item) => item.id === action.payload.id);
+
             if (itemInPantry) {
-                itemInPantry.quantity++;
+                itemInPantry.quantity += 1;
             } else {
-                state.push({ ...action.payload, quantity: 1});
+                state.push({ ...action.payload, quantity: 1 });
                 
             }
         },
