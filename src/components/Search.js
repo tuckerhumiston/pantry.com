@@ -9,7 +9,7 @@ const SearchBar = ({keyword, onChange}) => {
         style={BarStyle}
         key="search-bar"
         value={keyword}
-        placeholder={"search news"}
+        placeholder={"search items"}
         onChange={(e) => onChange(e.target.value)}
         />
     );
