@@ -5,7 +5,7 @@
     justify-content: center;
     align-items: center;
 
-    background-image: url("../../styles/images/produce-background.jpg");
+    background-image: url("../../styles/images/produce-background.jpg") !important;
     height: 20em;
     width: 100%;
     background-size: cover;
@@ -15,7 +15,6 @@
 
 h1 {
     color: azure !important;
-
 }
 
 a {

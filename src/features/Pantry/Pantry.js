@@ -12,9 +12,7 @@ export default function Pantry() {
     const pantry = useSelector(selectPantry);
 
     return (
-        <div className="main">
-            <h1>Pantry</h1>
-            
+        <div className="main">            
             <div className="pantry">
                 <div className="left">
                     <h2>Add Items</h2>
