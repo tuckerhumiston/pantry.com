@@ -5,9 +5,11 @@ import './Recipes.css';
 const key = '89282685-0b1f-4495-8a64-4088f790e6ee';
 
 export default function Recipes() {
+
   const [posts, setPosts] = useState([]);
   const [searchInput, setSearchInput] = useState("");
 
+  //Recipe component
   const recipesDisplay = posts.map((response, i) => (
     <div key={response.id} className="list-group-item">
       <img src={response.image_url} alt={response.title} />
@@ -18,10 +20,12 @@ export default function Recipes() {
     </div>
   ));
 
+  //Runs everytime the searchbar is modified
   const handleChange = (e) => {
     setSearchInput(e.target.value);
   };
 
+  //API call
   useEffect(() => {
     async function fetchData() {
       try {
@@ -37,12 +41,13 @@ export default function Recipes() {
     fetchData();
   }, [searchInput]);
 
+
   return (
-    <div className="main">
+    <div className="main recipes">
       <form>
         <input
           type="search"
-          placeholder="Search here"
+          placeholder="Search Recipes..."
           onChange={handleChange}
           value={searchInput}
         />

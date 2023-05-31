@@ -30,8 +30,6 @@ export default function Shopping() {
             </div>
 
             <h2>Cart: <a href="http://localhost:3000/cart">🛒</a> ${getTotal()}</h2>
-            {/* <h2>Cart: <a href="http://localhost:3000/cart">🛒</a> $</h2> */}
-
 
             <div>
                 <h2>Produce</h2>

@@ -1,10 +1,59 @@
-.list-group-item {
-    display: inline-flex;
-    margin: 1em 4em;
-    padding: 1em;
-    background-color: aliceblue;
-}
-
-img {
-    max-width: 16em;
-}
+.recipes {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  h1 {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  form {
+    margin-bottom: 20px;
+    margin-top: 6em;
+  }
+  
+  input[type="search"] {
+    width: 300px;
+    padding: 8px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+  }
+  
+  button[type="submit"] {
+    padding: 8px 16px;
+    font-size: 16px;
+    border-radius: 4px;
+    background-color: #4caf50;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .list-group-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  .list-group-item img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 20px;
+  }
+  
+  .list-group-item h3 {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 8px;
+  }
+  
+  .list-group-item p {
+    font-size: 14px;
+    color: #777;
+  }
+  
