@@ -1,0 +1,10 @@
+.list-group-item {
+    display: inline-flex;
+    margin: 1em 4em;
+    padding: 1em;
+    background-color: aliceblue;
+}
+
+img {
+    max-width: 16em;
+}

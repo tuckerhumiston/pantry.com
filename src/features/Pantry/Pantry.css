@@ -12,9 +12,13 @@
 .right {
     width: 65%;
     position: relative;
-    justify-content: flex-start;
+    display: flex;
+    justify-content: center;
 
-    background-color: rgb(255, 166, 0);
+    background-color: rgb(255, 255, 255);
+    /* font-size: 0.7em; */
+    box-shadow: 0px 0px 2px 2px rgb(170, 170, 170);
+    border: 2px solid rgb(147, 147, 147);
 }
 
 .left {
@@ -22,5 +26,41 @@
     position: relative;
     justify-content: flex-start;
 
-    background-color: rgb(148, 0, 0);
+    background-color: rgb(255, 255, 255);
+    border: 2px solid rgb(147, 147, 147);
+
+}
+
+.pantry-info {
+    display: inline-flex;
+    border: 1px solid rgb(17, 17, 17);
+    width: 100%;
+    margin: 0 2.5em;
+    align-items: center;
+}
+
+.pantry-info button {
+    font-weight: 300;
+    font-size: 0.8em;
+    padding: 0.2em;
+    margin: 2em 0.5em;
+}
+
+th td{
+    padding: 2em;
+}
+
+.buttons {
+    /* background-color: aqua; */
+}
+
+table {
+    display: flex;
+    flex-direction: column;
+}
+
+table tr {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
 }

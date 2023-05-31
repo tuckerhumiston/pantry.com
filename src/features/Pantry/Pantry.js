@@ -23,8 +23,7 @@ export default function Pantry() {
                 <div className="right">
                     <h2>Your Pantry</h2>
                     <SearchBar id="pantry-search" />
-
-                    <div>
+                    <table>
                         {pantry?.map((item) => (
                             <PantryItem 
                                 key={item.id}
@@ -34,7 +33,7 @@ export default function Pantry() {
                                 quantity={item.quantity}
                             />
                         ))}
-                    </div>
+                    </table>
 
                 </div>
             </div>

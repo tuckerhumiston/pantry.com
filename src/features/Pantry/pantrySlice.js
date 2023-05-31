@@ -24,11 +24,12 @@ const pantrySlice = createSlice({
         },
         decrementQuantity: (state, action) => {
             const item = state.find((item) => item.id === action.payload);
+            console.log(item);
             if (!item) { return}
-            if (item.quantity === 1) {
-                item.quantity = 1
-            } else {
+            if (item.quantity > 1) {
                 item.quantity--;
+            } else {
+                return state.filter((item) => item.id !== action.payload);
             }
         },
         removeItem: (state, action) => {

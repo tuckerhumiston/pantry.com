@@ -1,20 +1,18 @@
 import React from 'react';
 import "../styles/components.css"
 
-export default function Search() {
 
+const SearchBar = ({keyword, onChange}) => {
+    const BarStyle = {width:"20rem",background:"#F0F0F0", border:"none", padding:"0.5rem"};
     return (
-        <form action="/" method="get">
-            <label htmlFor="header-search">
-                <span className="visually-hidden">Search Items</span>
-            </label>
-            <input
-                type="text"
-                id="header-search"
-                placeholder="Search items"
-                name="s" 
-            />
-            <button type="submit">Search</button>
-        </form>
-    )
-}
+        <input 
+        style={BarStyle}
+        key="search-bar"
+        value={keyword}
+        placeholder={"search news"}
+        onChange={(e) => onChange(e.target.value)}
+        />
+    );
+    }
+    
+    export default SearchBar;
