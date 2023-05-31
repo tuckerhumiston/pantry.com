@@ -26,24 +26,23 @@ export default function Recipes() {
 
     };
 
-    const ShowPosts = () => {
-        useEffect( () => { 
-            async function fetchData() {
-                try {
-                    const response = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes?search=${searchInput}&key=${key}`); 
-                    if (response.ok) {
-                        const jsonResponse = await response.json();
-                        console.log(searchInput);
-                        await setPosts(jsonResponse.data.recipes);
-                        await console.log(jsonResponse);
-                    }                    
-                } catch (err) {
-                    console.log(err);
-                }
+
+    useEffect( () => { 
+        async function fetchData() {
+            try {
+                const response = await fetch(`https://forkify-api.herokuapp.com/api/v2/recipes?search=${searchInput}&key=${key}`); 
+                if (response.ok) {
+                    const jsonResponse = await response.json();
+                    console.log(searchInput);
+                    await setPosts(jsonResponse.data.recipes);
+                    await console.log(jsonResponse);
+                }                    
+            } catch (err) {
+                console.log(err);
             }
-            fetchData();
-        }, []);
-    }
+        }
+        fetchData();
+    }, []);
 
 
     return (
@@ -58,8 +57,6 @@ export default function Recipes() {
                 />
                 <button onClick={handleChange}>Submit</button>
             </form>
-            
-            {ShowPosts()}
             {recipesDisplay}
             
         </div>
