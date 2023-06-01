@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements} from 'react-router-dom';
+import {Route, RouterProvider, createBrowserRouter, createRoutesFromElements, Navigate } from 'react-router-dom';
 
 import './App.css';
 import Root from '../components/Root';
@@ -13,20 +13,20 @@ import Recipes from '../features/Recipes/Recipes';
 
 const router = createBrowserRouter( createRoutesFromElements( 
   <>
-  <Route path="/login" element={ <Login /> } />
+    <Route path="/login" element={ <Login /> } />
+    <Route path="/" element={ <Root /> }>
 
-  <Route path="/" element={ <Root /> }>
-    <Route path="login" element={ <Login /> } />
-    <Route path="profile" element={ <Profile /> } />
+      <Route path="login" element={ <Login /> } />
+      <Route path="profile" element={ <Profile /> } />
 
-    <Route path="home" element={ <Home /> } />
-    <Route path="shopping" element={ <Shopping /> } />
-    <Route path="pantry" element={ <Pantry /> } />
-    <Route path="recipes" element={ <Recipes /> } />
+      <Route path="home" element={ <Home /> } />
+      <Route path="shopping" element={ <Shopping /> } />
+      <Route path="pantry" element={ <Pantry /> } />
+      <Route path="recipes" element={ <Recipes /> } />
 
-    {/* <Route path="error" component={ <NotFound /> } /> */}
+      <Route path="" element={<Navigate to="/home" />} />
 
-  </Route>
+    </Route>
   </>
 ));
 
@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header"></header>
-      <RouterProvider router={ router }/>
+      <RouterProvider router={ router } /> 
     </div>
   );
 }

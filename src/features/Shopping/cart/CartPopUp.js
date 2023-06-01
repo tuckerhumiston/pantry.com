@@ -6,6 +6,7 @@ import { selectCart } from './cartSlice';
 import CartItem from './CartItem';
 
 import { addToPantry, incrementQuantity } from "../../Pantry/pantrySlice";
+import {removeItem } from "./cartSlice";
 import { selectPantry } from "../../Pantry/pantrySlice";
 
 import './CartPage.css';
@@ -43,13 +44,14 @@ export default function CartPopUp(props) {
     }
 
     const handleCheckout = () => {
-        console.log('testing checkout...');
+    
+        cart.forEach(item => {
+          isItemInCart(item);
+          dispatch(removeItem(item.id));
+        });
 
-        cart?.forEach( item => (
-            isItemInCart(item)
-        ))
-
-    }
+        props.setTrigger(false);
+      }
 
     return ( props.trigger) ? (
         <div className="popup">

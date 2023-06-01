@@ -18,6 +18,10 @@
     align-items: center;
 }
 
+.shopping h1 {
+    color: white;
+}
+
 /* CSS */
 #cart-btn {
   margin-top: 1.5em;
