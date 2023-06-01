@@ -29,6 +29,7 @@ export default function Shopping() {
                 <Search id="shopping-search" />
             </div>
 
+            {/* <h2>Cart: <a href="http://localhost:3000/cart">🛒</a> ${getTotal()}</h2> */}
             <h2>Cart: <a href="http://localhost:3000/cart">🛒</a> ${getTotal()}</h2>
 
             <div>
