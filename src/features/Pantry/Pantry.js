@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useState, useEffect} from "react";
 import SearchBar from "../../components/Search";
 import "./Pantry.css";
 
@@ -17,10 +17,11 @@ export default function Pantry() {
                 <div className="left">
                     <h2>Add Items</h2>
                     <SearchBar id="item-search" />
+
                 </div>
                 <div className="right">
                     <h2>Your Pantry</h2>
-                    <SearchBar id="pantry-search" />
+                    {/* <SearchBar id="pantry-search" /> */}
                     <table>
                         {pantry?.map((item) => (
                             <PantryItem 
