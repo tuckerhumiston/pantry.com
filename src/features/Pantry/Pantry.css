@@ -1,12 +1,10 @@
 .pantry {
     background-color: black;
-
     min-height: 800px;
-
     display: flex;
     flex-direction: row;
     position: relative;
-
+    margin-top: 6em;
 }
 
 .right {
@@ -14,9 +12,7 @@
     position: relative;
     display: flex;
     justify-content: center;
-
     background-color: rgb(255, 255, 255);
-    /* font-size: 0.7em; */
     box-shadow: 0px 0px 2px 2px rgb(170, 170, 170);
     border: 2px solid rgb(147, 147, 147);
 }
@@ -25,17 +21,14 @@
     width: 35%;
     position: relative;
     justify-content: flex-start;
-
     background-color: rgb(255, 255, 255);
     border: 2px solid rgb(147, 147, 147);
-
 }
 
 .pantry-info {
     display: inline-flex;
     border: 1px solid rgb(17, 17, 17);
     width: 100%;
-    margin: 0 2.5em;
     align-items: center;
 }
 
@@ -46,21 +39,23 @@
     margin: 2em 0.5em;
 }
 
-th td{
-    padding: 2em;
-}
-
-.buttons {
-    /* background-color: aqua; */
-}
-
 table {
-    display: flex;
-    flex-direction: column;
+    width: 100%;
+    border-collapse: collapse;
+    margin: 3em;
+    
 }
 
 table tr {
     display: flex;
     justify-content: space-around;
     width: 100%;
+    border-bottom: 1px solid #ccc;
+}
+
+table th,
+table td {
+    flex: 1;
+    text-align: center;
+    
 }

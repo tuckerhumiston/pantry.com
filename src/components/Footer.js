@@ -4,8 +4,10 @@ import '../styles/Footer.css';
 export default function Footer() {
 
     return (
-        <div className="footer">
-            <p>FOOTER TEST</p> 
-        </div>
+        <footer className="footer">
+            <div className="container">
+                <p>&copy; {new Date().getFullYear()} Pantry.com. All rights reserved.</p>
+            </div>
+        </footer>   
     )
 }
