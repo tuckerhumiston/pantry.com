@@ -1,9 +1,9 @@
 .cart-page {
-    background-color: rgb(255, 255, 255);
     margin: 0;
-    padding: 4em 2em;
+    /* padding: 0em 2em; */
 
     display: flex;
+    align-items: center;
 }
 
 .cart-page h1 {
@@ -19,7 +19,7 @@
     justify-content: center;
     background-color: blanchedalmond;
     text-align: center;
-    margin: 1.5em 0 0 2em;
+    margin: 2em 0 0 2em;
 }
 
 .payment form{
