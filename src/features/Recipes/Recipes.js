@@ -74,11 +74,18 @@ export default function Recipes() {
           value={searchInput}
         />
       </form>
+      {console.log(selectedRecipe)}
       {selectedRecipe ? (
         <div className="recipe-details">
-          <h2>{selectedRecipe.title}</h2>
-          <img src={selectedRecipe.image_url} alt={selectedRecipe.title} />
-          <div>
+          <div className="non-ingredients">
+            <h2>{selectedRecipe.title}</h2>
+            <img src={selectedRecipe.image_url} alt={selectedRecipe.title} />
+            <h3>Publisher: {selectedRecipe.publisher}</h3>
+            <h4>Cooking Time: {selectedRecipe.cooking_time} minutes</h4>
+            <h4>Servings: {selectedRecipe.servings}</h4>
+          </div>
+          
+          <div className="Ingredients">
             <h3>Ingredients:</h3>
             <ul>
             {selectedRecipe.ingredients.map((ingredient, index) => (
@@ -88,6 +95,8 @@ export default function Recipes() {
             ))}
             </ul>
           </div>
+          <a href={selectedRecipe.source_url} target="_blank">Get The Recipe</a>
+
           <button onClick={() => setSelectedRecipe(null)}>Back to Recipes</button>
         </div>
       ) : (

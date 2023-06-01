@@ -69,6 +69,8 @@ button[type="submit"] {
 
 .recipe-details {
   margin-top: 2em;
+  background-color: #88aee7;
+  padding: 1em;
 }
 
 .recipe-details h2 {
@@ -97,4 +99,9 @@ button[type="submit"] {
 
 .recipe-details li {
   margin-bottom: 8px;
+}
+
+.non-ingredients {
+  background-color: #777777b9;
+  padding: 1em;
 }
