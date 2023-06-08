@@ -5,7 +5,7 @@
     <img src="/public/Logo.png" width="80" height="80">
   </a>
 
-<h3 align="center">Pantry.com</h3>
+<h3 align="center">Pantry.com (Template)</h3>
 
   <p align="center">
     Welcome to Pantry.com - Your cooking companion! This application is designed to enhance your online food shopping experience by keeping track of your purchases and providing personalized recipe recommendations based on your recent purchases. With this app, you'll never run out of meal ideas and can make the most out of your grocery shopping.
