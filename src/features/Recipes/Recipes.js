@@ -9,7 +9,7 @@ export default function Recipes() {
   const [searchInput, setSearchInput] = useState("");
   const [selectedRecipe, setSelectedRecipe] = useState(null);
 
-
+  //Display the list of recipes returned by the API
   const recipesDisplay = posts.map((response, i) => (
       <div key={i} className="list-group-item">
         <img src={response.image_url} alt={response.title} />
@@ -21,8 +21,9 @@ export default function Recipes() {
       </div>    
   ));
 
+  //Prevents Page Refresh
   const handleSubmit = (e) => {
-    e.preventDefault(); // Prevent the default form submission behavior
+    e.preventDefault(); 
   };
 
   // Runs every time the search bar is modified

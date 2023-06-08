@@ -29,7 +29,7 @@ export default function Shopping() {
 
             <div className="head-box"> 
                 <h1>Shopping</h1>
-                <Search id="shopping-search" />
+                {/* <Search id="shopping-search" /> */}
             </div>
 
             <button id="cart-btn" onClick={() => setCartPopup(true)} role="button">Cart: 🛒 ${getTotal()}</button>
