@@ -67,6 +67,6 @@ Please ensure that your code follows the project's coding style and conventions.
 
 ## Contact
 
-If you have any questions or would like to get in touch, please feel free to reach out to me at tuckerhumiston@hotmail.com(mailto:tuckerhumiston@hotmail.com). I'm open to feedback, suggestions, and potential collaboration opportunities!
+If you have any questions or would like to get in touch, please feel free to reach out to me at tuckerhumiston@hotmail.com. I'm open to feedback, suggestions, and potential collaboration opportunities!
 
 Thank you for your interest in Pantry.com!
